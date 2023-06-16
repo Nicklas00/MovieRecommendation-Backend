@@ -15,10 +15,6 @@ public interface WatchlistRepository extends JpaRepository<Watchlist, Long> {
   @Query("SELECT w FROM Watchlist w WHERE w.user.id = ?1")
   List<Movie> getWatchlistByUserIdQuery(long userId);
 
-  /*
-  Optional<Watchlist> getWatchlistByUserId(Long Long);
-  */
-
   List<Movie> getWatchlistByUserId(long userId);
 
 
